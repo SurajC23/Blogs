@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Redirect</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            if (code) {
+                // Handle the authorization code, e.g., send it to your backend
+                console.log('Authorization Code:', code);
+                // Redirect or display a message
+                document.body.innerHTML = 'Authorization code received. Please proceed.';
+            } else {
+                document.body.innerHTML = 'No authorization code found.';
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Handling OAuth Redirect...</p>
+</body>
+</html>
